@@ -996,7 +996,7 @@ footer .brand {
 }
 
 /* Gestaltet den Zurück-nach-oben-Link. */
-@media (max-width: 1050px) {
+@media (max-width: 1400px) {
 
   /* Aktiviert die Tablet-Navigation. */
   .topbar {
@@ -1818,7 +1818,7 @@ body:not(.authenticated)::before {
   margin: clamp(72px, 15vh, 150px) auto;
   padding: clamp(30px, 6vw, 52px);
   border: 1px solid rgba(83, 107, 87, .18);
-  background: rgba(255, 253, 248, .94);
+  background: var(--surface);
   box-shadow: 0 24px 70px rgba(38, 55, 46, .14), 0 5px 16px rgba(38, 55, 46, .06);
   animation: password-gate-arrive .7s cubic-bezier(.2, .75, .25, 1) both;
 }
@@ -1856,7 +1856,7 @@ body:not(.authenticated)::before {
 
 #password-gate .password-gate-flower {
   position: fixed;
-  z-index: 2;
+  z-index: 0;
   width: clamp(140px, 20vw, 255px);
   height: auto;
   pointer-events: none;
