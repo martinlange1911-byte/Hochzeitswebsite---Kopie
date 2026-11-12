@@ -49,6 +49,8 @@ Bis die URL eingetragen ist, meldet das Formular ausdrücklich, dass die Antwort
 
 Eine Domain (z. B. `pia-und-martin.de`) wird bei einem Domainanbieter registriert. Zusätzlich braucht ihr einen Webhosting-Anbieter oder einen statischen Hostingdienst, auf den ihr die Dateien hochladet. Die Dateien müssen gemeinsam online liegen; `index.html`, `styles.css` und `script.js` müssen im selben Website-Ordner bleiben. Wenn ihr das Foto nutzt, ladet auch den Ordner `images` mit hoch.
 
+Ein Git-Commit und Push aktualisiert die veröffentlichte Website nur dann automatisch, wenn der Hostingdienst ausdrücklich mit dem Repository verbunden ist. Bei manuellem Hosting müsst ihr geänderte Dateien nach dem Push zusätzlich zum Webhoster hochladen. Für CSS-Änderungen sollte bei Bedarf auch der Versionsparameter am Stylesheet-Link in `index.html` geändert werden, damit Browser oder CDN nicht weiter die alte Datei verwenden.
+
 Vor dem Veröffentlichen:
 - echte Orte, Uhrzeiten und Kontaktangaben eintragen,
 - euer Foto ergänzen,
