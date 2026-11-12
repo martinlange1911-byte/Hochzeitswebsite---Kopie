@@ -1972,6 +1972,12 @@ body:not(.authenticated)::before {
   }
 }
 
+@media (max-width: 900px), (max-height: 500px) {
+  #password-gate .password-gate-flower {
+    display: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   #password-gate {
     animation: none;
