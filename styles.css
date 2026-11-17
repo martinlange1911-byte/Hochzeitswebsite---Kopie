@@ -1960,32 +1960,16 @@ body:not(.authenticated)::before {
   #password-gate {
     margin-block: 12vh;
   }
-
-  #password-gate .password-gate-flower-top {
-    width: 92px;
-    opacity: .55;
-  }
-
-  #password-gate .password-gate-flower-bottom {
-    width: 105px;
-    opacity: .55;
-  }
 }
 
 @media (max-width: 1200px), (max-height: 800px) {
   #password-gate .password-gate-flower {
     width: clamp(72px, min(10vw, 13vh), 125px);
-    opacity: .55;
+    opacity: .12;
   }
 
   #password-gate .password-gate-flower-bottom {
     width: clamp(72px, min(9vw, 12vh), 115px);
-  }
-}
-
-@media (max-width: 900px), (max-height: 500px) {
-  #password-gate .password-gate-flower {
-    display: none !important;
   }
 }
 
