@@ -1,0 +1,3 @@
+[remote "origin"]
+    url = https://github.com/martinlange1991-byte/P-M.git
+    fetch = +refs/heads/*:refs/remotes/origin/*

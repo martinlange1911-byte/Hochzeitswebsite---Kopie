@@ -47,9 +47,13 @@ Bis die URL eingetragen ist, meldet das Formular ausdrücklich, dass die Antwort
 
 ## Eigene Domain und Veröffentlichung
 
-Eine Domain (z. B. `pia-und-martin.de`) wird bei einem Domainanbieter registriert. Zusätzlich braucht ihr einen Webhosting-Anbieter oder einen statischen Hostingdienst, auf den ihr die Dateien hochladet. Die Dateien müssen gemeinsam online liegen; `index.html`, `styles.css` und `script.js` müssen im selben Website-Ordner bleiben. Wenn ihr das Foto nutzt, ladet auch den Ordner `images` mit hoch.
+Die Website wird über GitHub Pages veröffentlicht. Der Workflow in `.github/workflows/deploy-pages.yml` veröffentlicht nach jedem Push auf `master` automatisch `index.html`, `styles.css`, `script.js` und den Ordner `images`. `GoogleAppsScript.gs` und andere nicht für die Website benötigte Repository-Dateien werden nicht veröffentlicht.
 
-Ein Git-Commit und Push aktualisiert die veröffentlichte Website nur dann automatisch, wenn der Hostingdienst ausdrücklich mit dem Repository verbunden ist. Bei manuellem Hosting müsst ihr geänderte Dateien nach dem Push zusätzlich zum Webhoster hochladen. Für CSS-Änderungen sollte bei Bedarf auch der Versionsparameter am Stylesheet-Link in `index.html` geändert werden, damit Browser oder CDN nicht weiter die alte Datei verwenden.
+Für die erstmalige Einrichtung wählt in den Repository-Einstellungen unter **Settings > Pages** bei **Build and deployment** die Quelle **GitHub Actions**. Danach löst ein Push auf `master` die Veröffentlichung aus. Den Status und die Live-URL findet ihr im Repository unter **Actions**.
+
+Die Datei `CNAME` enthält `pia-und-martin-heiraten.de`. Damit die eigene Domain erreichbar ist, müssen zusätzlich beim Domainanbieter die von GitHub Pages geforderten DNS-Einträge gesetzt sein. Die Domain-Einstellungen und vorhandene DNS-Einträge werden durch diesen Workflow nicht geändert.
+
+Für CSS-Änderungen sollte bei Bedarf auch der Versionsparameter am Stylesheet-Link in `index.html` geändert werden, damit Browser oder CDN nicht weiter die alte Datei verwenden.
 
 Vor dem Veröffentlichen:
 - echte Orte, Uhrzeiten und Kontaktangaben eintragen,
